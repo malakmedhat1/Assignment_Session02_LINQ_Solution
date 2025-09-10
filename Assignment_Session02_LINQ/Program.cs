@@ -358,22 +358,22 @@ namespace Assignment_Session02_LINQ
             #region 2. Uses group by to partition a list of words by their first letter.
             //Use dictionary_english.txt for Input
 
-            //var Result14 = dictionary
-            //    .GroupBy(word => word[0])
-            //    .Select(g => new
-            //    {
-            //        FirstLetter = g.Key,
-            //        Words = g.ToList()
-            //    });
+            var Result14 = dictionary
+                .GroupBy(word => word[0])
+                .Select(g => new
+                {
+                    FirstLetter = g.Key,
+                    Words = g.ToList()
+                });
 
-            //foreach (var item in Result14)
-            //{
-            //    Console.WriteLine($"Words that start with the letter '{item.FirstLetter}':");
-            //    foreach (var word in item.Words)
-            //        Console.WriteLine(word);
-            //    Console.WriteLine();
-            //}
-            //Console.WriteLine("--------------------------------------------------");
+            foreach (var item in Result14)
+            {
+                Console.WriteLine($"Words that start with the letter '{item.FirstLetter}':");
+                foreach (var word in item.Words)
+                    Console.WriteLine(word);
+                Console.WriteLine();
+            }
+            Console.WriteLine("--------------------------------------------------");
             #endregion
 
             #region 3. Consider this Array as an Input
